@@ -1,0 +1,160 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #10182f;
+}
+
+.apps-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+    padding: 50px;
+    background: #fff;
+    border-radius: 3px;
+}
+
+.apps {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 50px;
+}
+
+.apps>div {
+    width: 47%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 15px;
+    padding: 15px;
+    transition: all ease-in-out .3s;
+    cursor: pointer;
+}
+
+.apps>div:hover {
+    background: #eee;
+    border-radius: 5px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar.instabug,
+.avatar.gamma,
+.avatar.leanboard,
+.avatar.odin {
+    background: #eff2fb;
+}
+
+.avatar.octobox {
+    background: #10182f;
+}
+
+.avatar.deepscan {
+    background: #1245b8;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
+
+.description {
+    width: 60%;
+}
+
+h2,
+h4 {
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+p {
+    color: #444;
+}
+
+.fa {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    line-height: 15px;
+    text-align: center;
+    background: green;
+    color: #fff;
+    font-size: x-small;
+    position: relative;
+}
+
+.fa:hover>.tool-tip {
+    display: block;
+}
+
+.tool-tip {
+    display: none;
+    background: #10182f;
+    color: #fff;
+    font-size: 16px;
+    position: absolute;
+    padding: 15px 30px;
+    border-radius: 5px;
+    bottom: 160%;
+    left: -320%;
+}
+
+.tool-tip:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border: 5px solid;
+    border-color: #10182f transparent transparent transparent;
+}
+
+button {
+    background: #10182f;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    transition: all ease-in-out .3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+@media(max-width:1318px) {
+    .apps {
+        flex-direction: column;
+        align-items: center;
+    }
+    .apps>div {
+        width: 70%;
+    }
+}
+
+@media(max-width:776px) {
+    .apps-list {
+        margin: 20px;
+    }
+    .apps {
+        margin: 50px -50px;
+    }
+    .apps>div {
+        width: 90%;
+    }
+}
